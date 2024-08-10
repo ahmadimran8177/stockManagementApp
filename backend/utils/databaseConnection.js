@@ -1,18 +1,16 @@
 const mongoose = require("mongoose");
-const config = require("config");
+const debug = require("../debuggers/customDebugger");
 
 const databaseConnection = async () => {
-  const connectionUri = config.get("mongodb-connection-uri");
-  const serverPort = config.get("server-port");
+  const connectionUri = process.env.MONGODB_CONNECTION_URI;
+
   await mongoose
     .connect(connectionUri)
     .then(function () {
-      console.log(
-        `Connected to Database and Server is running on post ${serverPort}`
-      );
+      debug("Connected to Database");
     })
     .catch((err) => {
-      console.log(err);
+      debug(err);
     });
 };
 

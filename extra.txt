@@ -1,0 +1,9 @@
+const data = await fetch('http://localhost:5000/api/get_products_by_title',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          }
+        );

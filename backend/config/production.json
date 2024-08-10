@@ -1,6 +1,5 @@
 {
-  "mongodb-connection-url": "mongodb+srv://ahmadimran8177:Ahmadimran8177.@stockdatabase.jbqopba.mongodb.net/",
-  "server-port": 3000,
+  "server-port": 5000,
   "client-url": "http://localhost:5173",
   "secure-cookies": true,
   "cookie-options": {
