@@ -34,6 +34,7 @@ const FormSchema = z.object({
     color: z.string().optional(),
     warehouse: z.string().optional(),
     stock: z.string().optional(),
+    brandException: z.string().optional(),
 })
 
 export default function page() {
@@ -116,7 +117,18 @@ export default function page() {
                 query = query + "&stock=" + data?.stock;
             }
         };
-        router.push(`/products?${query}`);
+        if (data?.brandException) {
+            if (!query) {
+                query = "brandException=" + data?.brandException;
+            } else {
+                query = query + "&brandException=" + data?.brandException;
+            }
+        };
+        if (!query) {
+            router.push(`/products`);
+        } else {
+            router.push(`/products?${query}`);
+        }
     }
 
     return (
@@ -243,6 +255,32 @@ export default function page() {
                                             </FormControl>
                                             <SelectContent>
                                                 {details?.condition?.map((item) => (
+                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                ))}
+                                            </SelectContent>
+                                        </Select>
+                                        {/* <FormDescription>
+                                You can manage email addresses in your{" "}
+                                <Link href="/examples/forms">email settings</Link>.
+                            </FormDescription> */}
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <FormField
+                                control={form.control}
+                                name="brandException"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        {/* <FormLabel>Stock</FormLabel> */}
+                                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                            <FormControl>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Select Brand Exception" />
+                                                </SelectTrigger>
+                                            </FormControl>
+                                            <SelectContent>
+                                                {details?.brandException?.map((item) => (
                                                     <SelectItem value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>

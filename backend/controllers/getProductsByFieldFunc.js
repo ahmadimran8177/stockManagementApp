@@ -13,6 +13,7 @@ const getProductsByField = async (req, res, next) => {
       print,
       condition,
       warehouse,
+      brandException,
     } = req.query;
 
     const newStock = Number(stock);
@@ -25,10 +26,14 @@ const getProductsByField = async (req, res, next) => {
     const printRegex = new RegExp(print);
     const conditionRegex = new RegExp(condition);
     const warehouseRegex = new RegExp(warehouse);
+    const brandExceptionRegex = new RegExp(brandException, "i");
 
     const query = {};
     if (stock) {
       query.stock = { $gte: newStock };
+    }
+    if (brandException) {
+      query.$and = [{ brand: { $not: { $regex: brandExceptionRegex } } }];
     }
     if (brand) {
       query.brand = { $regex: brandRegex, $options: "i" };

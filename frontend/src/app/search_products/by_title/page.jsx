@@ -44,7 +44,7 @@ export default function ProfileForm() {
       <div className='flex justify-center items-center w-full'>
         <div className='w-[90%] lg:w-[60%] pb-10 space-y-2 flex justify-center items-center flex-col'>
           {fetchedProduct?.map((product) => (
-            <Link href={`/products/${product?._id}`} className='w-full border-black border-[1px] border-solid p-2'>{product?.title}</Link>
+            <Link href={`/product/${product?._id}`} className='w-full border-black border-[1px] border-solid p-2'>{product?.title}</Link>
           ))}
         </div>
       </div>
