@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 databaseConnection();
 
-app.use("/",function(req,res,next){
+app.use("/", function (req, res, next) {
   res.send("Server is running")
 })
 app.use("/api/create_new_product", productRouter);
