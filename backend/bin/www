@@ -1,6 +1,7 @@
 const debug = require("../debuggers/customDebugger");
 const config = require("config");
-const serverPort = config.get("server-port");
+// const serverPort = config.get("server-port");
+const serverPort = process.env.PORT;
 
 var app = require("../app");
 // var debug = require('debug')('backend:server');
@@ -10,7 +11,7 @@ var http = require("http");
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(serverPort || "3000");
+var port = normalizePort(serverPort || "5000");
 app.set("port", port);
 
 /**
