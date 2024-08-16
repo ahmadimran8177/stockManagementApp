@@ -1,5 +1,5 @@
 const details = {
-  brand: ["Manaal", "Yaqoot", "Hi Taste", "Madni", "Meeraaj"],
+  brand: ["Manaal", "Yaqoot", "Hi Taste", "Madni", "Meeraaj", "Arshman", "Dubai", "Al noor", "Resham", "Brunj", "Abgeena", "Chraag", "Ravi", "Rachna", "Hameed", "Aamad", "Usmania"],
   lot: ["NN", "GP", "China 3 layer", "PP"],
   size: ["20kg", "25kg", "50kg"],
   weight: ["85g", "75g"],

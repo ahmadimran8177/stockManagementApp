@@ -20,7 +20,7 @@ export default function Home() {
           Add new Product
         </Link>
         <Link
-          href="/"
+          href="/assets"
           className="text-2xl py-4 w-full text-center border-x-[1px] border-black border-solid border-b-[1px] underline"
         >
           Assets Calculation

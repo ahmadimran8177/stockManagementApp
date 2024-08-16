@@ -103,15 +103,15 @@ export default async function page({ searchParams }) {
     .then((response) => response.json())
     .then((data) => data);
 
-  console.log(fetchedProducts);
-
-
   return (
-    <div className='w-full flex justify-center items-center my-4'>
+    <div className='w-full flex justify-center items-center my-4 flex-col'>
+      <div className='p-4 text-center w-full'>Showing {fetchedProducts?.length} Products</div>
       <div className='w-[90%] lg:w-[60%] grid grid-cols-1 lg:grid-cols-3 gap-2'>
         {fetchedProducts?.map((product) => (
-          <Link href={`/product/${product?._id}`} className='flex flex-col items-center border-black border-solid border-[1px] p-2'>
-            <Image className='mt-4' src={`https://res.cloudinary.com/diy5tmoq8/image/upload/v1723660770/ahmad%20bardana%20products/${product?.imageUrl}`} width="2000" height="2000" alt='Product Image' />
+          <Link key={product?.id} href={`/product/${product?._id}`} className='flex flex-col items-center border-black border-solid border-[1px] p-2'>
+            <Image className='mt-4' src={`https://res.cloudinary.com/diy5tmoq8/image/upload/v1723660770/ahmad%20bardana%20products/${product?.imageUrl}`}
+              width="2000" height="2000" alt='Product Image' loading='eager'
+            />
             <h3 className='w-full text-left my-6'>{product?.title}</h3>
             <h3 className='w-full text-left'>Stock : {product?.stock}</h3>
           </Link>
