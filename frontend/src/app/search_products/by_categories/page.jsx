@@ -24,7 +24,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const page = () => {
+const Page = () => {
 
     const router = useRouter();
 
@@ -435,4 +435,4 @@ const page = () => {
     )
 }
 
-export default page;
+export default Page;
