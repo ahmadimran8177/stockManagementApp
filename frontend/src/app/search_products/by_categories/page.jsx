@@ -37,7 +37,7 @@ const FormSchema = z.object({
     brandException: z.string().optional(),
 })
 
-export default function page() {
+function page() {
 
     const router = useRouter()
 
@@ -433,3 +433,5 @@ export default function page() {
         </Form>
     )
 }
+
+export default page;
