@@ -150,8 +150,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.brand?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.brand?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -176,8 +176,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.size?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.size?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -202,8 +202,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.border?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.border?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -228,8 +228,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.print?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.print?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -254,8 +254,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.condition?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.condition?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -280,8 +280,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.brandException?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.brandException?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -308,8 +308,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.lot?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.lot?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -334,8 +334,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.weight?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.weight?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -360,8 +360,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.color?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.color?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -386,8 +386,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.warehouse?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.warehouse?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -412,8 +412,8 @@ export default function page() {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {details?.stock?.map((item) => (
-                                                    <SelectItem value={item}>{item}</SelectItem>
+                                                {details?.stock?.map((item, i) => (
+                                                    <SelectItem key={i} value={item}>{item}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
