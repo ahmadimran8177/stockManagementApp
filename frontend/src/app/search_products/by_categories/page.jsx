@@ -24,23 +24,23 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const FormSchema = z.object({
-    brand: z.string().optional(),
-    size: z.string().optional(),
-    border: z.string().optional(),
-    print: z.string().optional(),
-    condition: z.string().optional(),
-    lot: z.string().optional(),
-    weight: z.string().optional(),
-    color: z.string().optional(),
-    warehouse: z.string().optional(),
-    stock: z.string().optional(),
-    brandException: z.string().optional(),
-})
-
 const page = () => {
 
-    const router = useRouter()
+    const router = useRouter();
+
+    const FormSchema = z.object({
+        brand: z.string().optional(),
+        size: z.string().optional(),
+        border: z.string().optional(),
+        print: z.string().optional(),
+        condition: z.string().optional(),
+        lot: z.string().optional(),
+        weight: z.string().optional(),
+        color: z.string().optional(),
+        warehouse: z.string().optional(),
+        stock: z.string().optional(),
+        brandException: z.string().optional(),
+    })
 
     const form = useForm({
         resolver: zodResolver(FormSchema),
