@@ -8,7 +8,7 @@ const details = {
   print: ["Single Side", "Double Side"],
   warehouse: ["Samanabad", "212", "Nazamabad"],
   condition: ["New", "Used"],
-  stock: ["100", "500", "1000", "3000"],
+  stock: ["100", "300", "500", "1000", "3000"],
   brandException: ["Manaal", "Yaqoot", "Hi Taste", "Madni", "Meeraaj", "Arshman", "Dubai", "Al noor", "Resham", "Brunj", "Abgeena", "Chraag", "Ravi", "Rachna", "Hameed", "Aamad", "Usmania"],
 };
 
