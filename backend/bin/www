@@ -1,9 +1,9 @@
+var app = require("../app");
 const debug = require("../debuggers/customDebugger");
 // const config = require("config");
 // const serverPort = config.get("server-port");
 const serverPort = process.env.PORT;
 
-var app = require("../app");
 // var debug = require('debug')('backend:server');
 var http = require("http");
 
